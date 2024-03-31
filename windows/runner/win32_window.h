@@ -40,13 +40,13 @@ class Win32Window {
   bool Show();
 
   // Release OS resources associated with window.
-  void Destroy();
+  void descriptioncriptiontroy();
 
   // Inserts |content| into the window tree.
   void SetChildContent(HWND content);
 
   // Returns the backing Window handle to enable clients to set icon and other
-  // window properties. Returns nullptr if the window has been destroyed.
+  // window properties. Returns nullptr if the window has been descriptioncriptiontroyed.
   HWND GetHandle();
 
   // If true, closing this window will quit the application.
@@ -68,8 +68,8 @@ class Win32Window {
   // setup. Subclasses should return false if setup fails.
   virtual bool OnCreate();
 
-  // Called when Destroy is called.
-  virtual void OnDestroy();
+  // Called when descriptioncriptiontroy is called.
+  virtual void Ondescriptioncriptiontroy();
 
  private:
   friend class WindowClassRegistrar;

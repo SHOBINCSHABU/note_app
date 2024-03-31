@@ -117,13 +117,13 @@ Win32Window::Win32Window() {
 
 Win32Window::~Win32Window() {
   --g_active_window_count;
-  Destroy();
+  descriptioncriptiontroy();
 }
 
 bool Win32Window::Create(const std::wstring& title,
                          const Point& origin,
                          const Size& size) {
-  Destroy();
+  descriptioncriptiontroy();
 
   const wchar_t* window_class =
       WindowClassRegistrar::GetInstance()->GetWindowClass();
@@ -131,7 +131,7 @@ bool Win32Window::Create(const std::wstring& title,
   const POINT target_point = {static_cast<LONG>(origin.x),
                               static_cast<LONG>(origin.y)};
   HMONITOR monitor = MonitorFromPoint(target_point, MONITOR_DEFAULTTONEAREST);
-  UINT dpi = FlutterDesktopGetDpiForMonitor(monitor);
+  UINT dpi = FlutterdescriptioncriptionktopGetDpiForMonitor(monitor);
   double scale_factor = dpi / 96.0;
 
   HWND window = CreateWindow(
@@ -179,9 +179,9 @@ Win32Window::MessageHandler(HWND hwnd,
                             WPARAM const wparam,
                             LPARAM const lparam) noexcept {
   switch (message) {
-    case WM_DESTROY:
+    case WM_descriptioncriptionTROY:
       window_handle_ = nullptr;
-      Destroy();
+      descriptioncriptiontroy();
       if (quit_on_close_) {
         PostQuitMessage(0);
       }
@@ -221,11 +221,11 @@ Win32Window::MessageHandler(HWND hwnd,
   return DefWindowProc(window_handle_, message, wparam, lparam);
 }
 
-void Win32Window::Destroy() {
-  OnDestroy();
+void Win32Window::descriptioncriptiontroy() {
+  Ondescriptioncriptiontroy();
 
   if (window_handle_) {
-    DestroyWindow(window_handle_);
+    descriptioncriptiontroyWindow(window_handle_);
     window_handle_ = nullptr;
   }
   if (g_active_window_count == 0) {
@@ -268,7 +268,7 @@ bool Win32Window::OnCreate() {
   return true;
 }
 
-void Win32Window::OnDestroy() {
+void Win32Window::Ondescriptioncriptiontroy() {
   // No-op; provided for subclasses.
 }
 

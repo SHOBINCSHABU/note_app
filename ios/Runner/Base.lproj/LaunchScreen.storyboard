@@ -9,10 +9,10 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <layoutGuides>
+                    <layoutGuidescriptioncription>
                         <viewControllerLayoutGuide type="top" id="Ydg-fD-yQy"/>
                         <viewControllerLayoutGuide type="bottom" id="xbc-2k-c8Z"/>
-                    </layoutGuides>
+                    </layoutGuidescriptioncription>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

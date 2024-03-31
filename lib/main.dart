@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/view/splash_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(NoteApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class NoteApp extends StatelessWidget {
+  const NoteApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      home: SplashScreen(),
+    );
   }
 }
